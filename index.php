@@ -1,1 +1,1 @@
-<?php header( 'Location: 首頁.html' ) ; ?>
+<?php header( 'Location: index.html' ) ; ?>
