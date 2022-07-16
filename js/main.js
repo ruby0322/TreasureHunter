@@ -143,22 +143,23 @@ jQuery(document).ready(function( $ ) {
   })
 
 // custom code
-$(".panel").hide();
-$(".head-panel").hide();
+$('.panel').hide();
+$('.head-panel').hide();
 
-let counter = 0;
-$(".flip").click(function(){
+let isExpanded = false;
+$('.flip').click(() => {
+    $('.head-panel').toggle('slow');
+    $('.panel').slideToggle('slow');
 
-  $(".head-panel").toggle("slow");
-  $(".panel").slideToggle("slow");
-
-  if(counter % 2 == 0)
-    $(".full-staff-btn").text("收回");
-  else
-    $(".full-staff-btn").text("展開查看更多工作人員");
-
-  counter++;
-
-})
+    if(isExpanded) {
+      $('.full-staff-btn').text('收回');
+      $('.full-staff-btn').attr('haref', '#speakers');
+    } else {
+      $('.full-staff-btn').text('展開查看更多工作人員');
+      $('.full-staff-btn').removeAttr('href');
+    }
+    isExpanded = !isExpanded;
+  }
+)
 
 });
