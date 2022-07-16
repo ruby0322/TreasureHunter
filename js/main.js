@@ -143,23 +143,23 @@ jQuery(document).ready(function( $ ) {
   })
 
 // custom code
-$('.panel').hide();
-$('.head-panel').hide();
+  $('.panel').hide();
+  $('.head-panel').hide();
 
-let isExpanded = false;
-$('.flip').click(() => {
-    $('.head-panel').toggle('slow');
-    $('.panel').slideToggle('slow');
+  let isExpanded = false;
+  $('.flip').click(() => {
+      $('.head-panel').toggle('slow');
+      $('.panel').slideToggle('slow');
 
-    if(isExpanded) {
-      $('.full-staff-btn').text('收回');
-      $('.full-staff-btn').attr('haref', '#speakers');
-    } else {
-      $('.full-staff-btn').text('展開查看更多工作人員');
-      $('.full-staff-btn').removeAttr('href');
+      if(isExpanded) {
+        $('.full-staff-btn').text('收回');
+        $('.full-staff-btn').attr('href', '#speakers');
+      } else {
+        $('.full-staff-btn').text('展開查看更多工作人員');
+        $('.full-staff-btn').removeAttr('href');
+      }
+      isExpanded = !isExpanded;
     }
-    isExpanded = !isExpanded;
-  }
-)
+  )
 
 });
