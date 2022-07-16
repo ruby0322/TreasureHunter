@@ -143,5 +143,22 @@ jQuery(document).ready(function( $ ) {
   })
 
 // custom code
+$(".panel").hide();
+$(".head-panel").hide();
+
+let counter = 0;
+$(".flip").click(function(){
+
+  $(".head-panel").toggle("slow");
+  $(".panel").slideToggle("slow");
+
+  if(counter % 2 == 0)
+    $(".full-staff-btn").text("收回");
+  else
+    $(".full-staff-btn").text("展開查看更多工作人員");
+
+  counter++;
+
+})
 
 });
