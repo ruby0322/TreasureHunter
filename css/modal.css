@@ -2,11 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:300,400,600&subset=latin-ext');
 
 
-@media screen and (max-width: 768px) {
-	 html, body {
-		 font-size: 12px;
-	}
-}
+
  .button {
 	 text-decoration: none;
 	 font-size: 0.875rem;
@@ -126,3 +122,16 @@
     color: #fff;
 }
 
+
+@media screen and (max-width: 768px) {
+	html, body {
+		font-size: 12px;
+   }
+   .popup-inner {
+	   flex-direction: column;
+	   margin: 5px;
+   }
+   .popup__text {
+		padding: 20px;
+   }
+}
